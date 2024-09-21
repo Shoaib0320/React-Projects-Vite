@@ -145,6 +145,12 @@ function App() {
           className={`fa fa-copy copy-icon ${copied ? 'text-success' : ''}`}
           onClick={copyToClipboard}
           title="Copy password"
+          style={{ cursor: 'pointer', position: 'absolute', right: '40px', top: '20px' }}
+        ></i>
+         <i
+          className={`fa-solid fa-arrows-rotate`}
+          onClick={generatePassword}
+          title="Copy password"
           style={{ cursor: 'pointer', position: 'absolute', right: '10px', top: '20px' }}
         ></i>
       </div>
@@ -198,9 +204,6 @@ function App() {
           </label>
         </div>
       </div>
-      <button className="btn btn-primary mt-4" onClick={generatePassword}>
-        Generate Password
-      </button>
     </div>
   );
 }
